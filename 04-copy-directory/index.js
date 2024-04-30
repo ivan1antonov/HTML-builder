@@ -13,7 +13,7 @@ async function copyDir() {
       sourceDir,
       { withFileTypes: true },
       (files) => {
-        console.log(files);
+        console.log(files.toString());
         return files;
       },
     );
