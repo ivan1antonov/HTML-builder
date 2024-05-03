@@ -18,9 +18,4 @@ fs.readdir(pathSource, { withFileTypes: true }, (err, files) => {
       readStream.pipe(writeStream);
     }
   });
-  // const cssFiles = files.filter((file) => {
-  //   return file.isFile() && extName === '.css';
-  // });
-  // cssFiles.forEach((file) => {
-  // });
 });

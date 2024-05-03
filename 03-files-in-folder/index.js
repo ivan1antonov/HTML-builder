@@ -20,8 +20,3 @@ fs.readdir(context, { withFileTypes: true }, (err, files) => {
     }
   });
 });
-// if (err) console.log(err);
-// else
-//   files.forEach((el) => {
-//     if (Symbol(type) !== 2) console.log(el);
-//   });
