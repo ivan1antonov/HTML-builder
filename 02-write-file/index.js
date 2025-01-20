@@ -9,5 +9,5 @@ stdin.on('data', (chunk) => {
   if (chunk.toString().includes('exit')) process.exit();
   output.write(chunk);
 });
-process.on('exit', () => stdout.write('Everything was writing'));
+process.on('exit', () => stdout.write('Everything was writing, bye!\n'));
 process.on('SIGINT', () => process.exit());
