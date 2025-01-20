@@ -47,17 +47,17 @@ async function replaceTags(components, componentsPath, htmlFile) {
         htmlFile = htmlFile.replace(`{{${fileName}}}`, fileData);
       }
     }
-    return htmlFile; // Возвращаем измененный HTML файл
+    return htmlFile;
   } catch (error) {
     console.error(error.message);
-    return htmlFile; // Возвращаем исходный HTML файл в случае ошибки
+    return htmlFile;
   }
 }
 
 async function copyStyles() {
   try {
     const files = await fs.promises.readdir(styles, { withFileTypes: true });
-    const destPath = path.join(destinationPath, 'bundle.css');
+    const destPath = path.join(destinationPath, 'style.css');
     const writeStream = fs.createWriteStream(destPath);
     files.forEach((file) => {
       if (file.isFile()) {
