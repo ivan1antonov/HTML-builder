@@ -5,7 +5,7 @@ const context = path.join(__dirname, 'secret-folder');
 const sizeFile = (fileName, extNam, pathToFile) => {
   fs.stat(pathToFile, (err, stat) => {
     if (err) console.log(err.message);
-    console.log(`${fileName}-${extNam}-${(stat.size / 1024).toFixed(3)}Kb`);
+    console.log(`${fileName}-${extNam}-${(stat.size / 1000).toFixed(3)}Kb`);
   });
 };
 
